@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-nx4cYFESZwHk8GaNhBmTtSlv1QSXsAigXY/8w/+Ci9bQ3xN48c5OX3ySxCq6hNDzAV7XyAvmKxroE7PQ3Yx5gA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,
+    wght@7..72,400;7..72,600;7..72,700;7..72,800;7..72,900&
+    family=Livvic:wght@400;500;600;700&family=Lora:wght@400;600;700&
+    family=MuseoModerno:wght@400;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,900&
+    family=Playfair+Display:wght@400;600;700;800;900&family=Poppins:wght@400;500;700;800;900&
+    family=Roboto:wght@400;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+
+        <div class="de-header">
+            <div class="fi-head">
+                <div class="logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+            </div>
+
+            <div class="se-head">
+                <ul class="li-h">
+                    <li class="list-head">
+                        <a href="#" class="page-name">Home</a>
+                    </li>
+                    <li class="list-head">
+                        <a href="#" class="page-name">Destinations</a>
+                    </li>
+                    <li class="list-head">
+                        <a href="#" class="page-name">About</a>
+                    </li>
+                    <li class="list-head">
+                        <a href="#" class="page-name">Faq</a>
+                    </li>
+                    <li class="list-head">
+                        <a href="#" class="page-name">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="th-head">
+                <div class="pro-drop">
+                    <button class="pro-btn">
+                        <img src="images/profile-img.png" alt="">
+                    </button>
+                    <div class="drop-list">
+                        <div class="balance-detail">
+                            <h4>Balance: <span>200$</span></h4>
+                        </div>
+                        <div class="list-item">
+                            <a href="voucher.html">
+                                <button class="voucher">
+                                    <img src="images/voucher-img.png" alt="">
+                                    <div class="text">My Vouchers</div>                               
+                                </button>
+                            </a>
+    
+                            <button class="language">
+                                <img src="images/language-img.png" alt="">    
+                                <div class="text">English</div>
+                            </button>
+    
+                            <button class="money">
+                                <img src="images/dollar.png" alt="">
+                                <div class="text">USD</div>
+                            </button>
+    
+                            <button class="logout">
+                                <img src="images/logout.png" alt="">
+                                <div class="text">Log Out</div>
+                            </button>
+                        </div>  
+                    </div>
+                </div>
+                <div class="con-drop">
+                    <button class="con-btn" onclick="toggleDropdown()">
+                        <div class="con-text">Area Name</div>
+                        <img src="images/wh-down-arrow.png" alt="">
+                    </button>
+                    <ul class="country-dd"  id="countryDropdown">
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/afghanistan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Afghanistan')">Afghanistan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/albania.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Albania')">Albania</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Algeria.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Algeria')">Algeria</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Andorra.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Andorra')">Andorra</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Angola.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Angola')">Angola</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Antigua and Barbuda.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Antigua and Barbuda')">Antigua and Barbuda</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Argentina.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Argentina')">Argentina</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Armenia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Armenia')">Armenia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Australia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Australia')">Australia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Austria.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Austria')">Austria</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Azerbaijan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Azerbaijan')">Azerbaijan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Bahamas.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Bahamas, The')">Bahamas, The</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Bahrain.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Bahrain')">Bahrain</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Bangladesh.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Bangladesh')">Bangladesh</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Barbados.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Barbados')">Barbados</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Belarus.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Belarus')">Belarus</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Belgium.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Belgium')">Belgium</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Belize.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Belize')">Belize</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Benin.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Benin')">Benin</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Bosnia and Herzegovina.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Bosnia and Herzegovina')">Bosnia and Herzegovina</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Botswana.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Botswana')">Botswana</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Brazil.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Brazil')">Brazil</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Brunei.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Brunei')">Brunei</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Bulgaria.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Bulgaria')">Bulgaria</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Burkina Faso.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Burkina Faso')">Burkina Faso</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Burundi.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Burundi')">Burundi</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Cabo Verde.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Cabo Verde')">Cabo Verde</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Cambodia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Cambodia')">Cambodia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Cameroon.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Cameroon')">Cameroon</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Canada.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Canada')">Canada</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/CAR.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Central African Republic')">Central African Republic</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Chad.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Chad')">Chad</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Chile.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Chile')">Chile</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/China.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'China')">China</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Colombia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Colombia')">Colombia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Comoros.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Comoros')">Comoros</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Croatia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Croatia')">Croatia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Cuba.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Cuba')">Cuba</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Cyprus.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Cyprus')">Cyprus</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Czechia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Czechia')">Czechia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Denmark.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Denmark')">Denmark</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Djibouti.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Djibouti')">Djibouti</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Dominica.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Dominica')">Dominica</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Dominican Republic.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Dominican Republic')">Dominican Republic</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Ecuador.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Ecuador')">Ecuador</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Egypt.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Egypt')">Egypt</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/El Salvador.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'El Salvador')">El Salvador</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Equatorial Guinea.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Equatorial Guinea')">Equatorial Guinea</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Eritrea.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Eritrea')">Eritrea</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Estonia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Estonia')">Estonia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Eswatini.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Ethiopia')">Eswatini</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Fiji.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Fiji')">Fiji</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Finland.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Finland')">Finland</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/France.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'France')">France</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Gabon.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Gabon')">Gabon</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Gambia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'The Gambia')">The Gambia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Georgia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Georgia')">Georgia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Germany.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Germany')">Germany</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Ghana.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Ghana')">Ghana</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Greece.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Greece')">Greece</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Grenada.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Grenada')">Grenada</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Guatemala.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Guatemala')">Guatemala</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Guinea.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Guinea')">Guinea</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Guinea-Bissau.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Guinea-Bissau')">Guinea-Bissau</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Guyana.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Guyana')">Guyana</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Haiti.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Haiti')">Haiti</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Holy See.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Holy See')">Holy See</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Hungary.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Hungary')">Hungary</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Iceland.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Iceland')">Iceland</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/India.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'India')">India</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Indonesia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Indonesia')">Indonesia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Iran.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Iran')">Iran</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Iraq.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Iraq')">Iraq</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Ireland.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Ireland')">Ireland</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Israel.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Israel')">Israel</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Italy.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Italy')">Italy</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Jamaica.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Jamaica')">Jamaica</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Japan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Japan')">Japan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Jordan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Jordan')">Jordan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Kazakhstan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Kazakhstan')">Kazakhstan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Kenya.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Kenya')">Kenya</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Kiribati.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Kiribati')">Kiribati</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Kuwait.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Kuwait')">Kuwait</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Kyrgyzstan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Kyrgyzstan')">Kyrgyzstan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Laos.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Laos')">Laos</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Latvia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Latvia')">Latvia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Lebanon.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Lebanon')">Lebanon</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Lesotho.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Lesotho')">Lesotho</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Liberia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Liberia')">Liberia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Libya.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Libya')">Libya</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Liechtenstein.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Liechtenstein')">Liechtenstein</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Lithuania.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Lithuania')">Lithuania</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Luxembourg.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Luxembourg')">Luxembourg</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Madagascar.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Madagascar')">Madagascar</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Malawi.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Malawi')">Malawi</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Malaysia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Malaysia')">Malaysia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Maldives.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Maldives')">Maldives</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Mali.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Mali')">Mali</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Malta.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Malta')">Malta</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Marshall Islands.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Marshall Islands')">Marshall Islands</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Mauritania.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Mauritania')">Mauritania</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Mauritius.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Mauritius')">Mauritius</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Mexico.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Mexico')">Mexico</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Micronesia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Micronesia')">Micronesia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Moldova.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Moldova')">Moldova</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Monaco.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Monaco')">Monaco</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Mongolia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Mongolia')">Mongolia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Montenegro.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Montenegro')">Montenegro</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Morocco.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Morocco')">Morocco</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Myanmar.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Myanmar')">Myanmar</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Namibia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Namibia')">Namibia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Nauru.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Nauru')">Nauru</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Nepal.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Nepal')">Nepal</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Netherlands.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Netherlands')">Netherlands</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/New Zealand.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'New Zealand')">New Zealand</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Nicaragua.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Nicaragua')">Nicaragua</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Niger.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Niger')">Niger</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Nigeria.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Nigeria')">Nigeria</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/North Macedonia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'North Macedonia')">North Macedonia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Norway.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Norway')">Norway</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Oman.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Oman')">Oman</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Pakistan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Pakistan')">Pakistan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Palau.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Palau')">Palau</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Panama.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Panama')">Panama</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Papua New Guinea.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Papua New Guinea')">Papua New Guinea</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Paraguay.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Paraguay')">Paraguay</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Peru.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Peru')">Peru</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Philippines.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Philippines')">Philippines</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Poland.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Poland')">Poland</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Portugal.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Portugal')">Portugal</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Qatar.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Qatar')">Qatar</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Romania.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Romania')">Romania</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Russia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Russia')">Russia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Rwanda.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Rwanda')">Rwanda</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Saint Kitts and Nevis.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Saint Kitts and Nevis')">Saint Kitts and Nevis</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Saint Lucia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Saint Lucia')">Saint Lucia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Samoa.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Samoa')">Samoa</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/San Marino.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'San Marino')">San Marino</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Sao Tome and Principe.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Sao Tome and Principe')">Sao Tome and Principe</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Saudi Arabia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Saudi Arabia')">Saudi Arabia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Senegal.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Senegal')">Senegal</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Serbia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Serbia')">Serbia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Seychelles.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Seychelles')">Seychelles</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Sierra Leone.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Sierra Leone')">Sierra Leone</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Singapore.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Singapore')">Singapore</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Slovakia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Slovakia')">Slovakia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Slovenia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Slovenia')">Slovenia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Solomon Islands.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Solomon Islands')">Solomon Islands</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Somalia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Somalia')">Somalia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/South Africa.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'South Africa')">South Africa</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/South Korea.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'South Korea')">South Korea</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/South Sudan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'South Sudan')">South Sudan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Sri Lanka.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Sri Lanka')">Sri Lanka</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Sudan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Sudan')">Sudan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Suriname.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Suriname')">Suriname</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Sweden.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Sweden')">Sweden</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Switzerland.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Switzerland')">Switzerland</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Syria.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Syria')">Syria</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Tajikistan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Tajikistan')">Tajikistan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Tanzania.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Tanzania')">Tanzania</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Thailand.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Thailand')">Thailand</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Timor-Leste.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Timor-Leste')">Timor-Leste</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Togo.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Togo')">Togo</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Tonga.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Tonga')">Tonga</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Trinidad and Tobago.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Trinidad and Tobago')">Trinidad and Tobago</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Tunisia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Tunisia')">Tunisia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Turkey.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Turkey')">Turkey</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Turkmenistan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Turkmenistan')">Turkmenistan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Tuvalu.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Tuvalu')">Tuvalu</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Uganda.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Uganda')">Uganda</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Ukraine.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Ukraine')">Ukraine</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/U.A.E..gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'United Arab Emirates')">United Arab Emirates</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/U.K..gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'United Kingdom')">United Kingdom</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/U.S..gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'United States of America')">United States of America</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Uruguay.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Uruguay')">Uruguay</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Uzbekistan.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Uzbekistan')">Uzbekistan</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Vanuatu.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Vanuatu')">Vanuatu</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Venezuela.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Venezuela')">Venezuela</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Vietnam.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Vietnam')">Vietnam</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Yemen.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Yemen')">Yemen</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Zambia.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Zambia')">Zambia</a>
+                        </li>
+                        <li class="co-list">
+                            <img class="c-img" src="flag-images/Zimbabwe.gif" alt="">
+                            <a class="c-name" href="#"  onclick="selectCountry(this, 'Zimbabwe')">Zimbabwe</a>
+                        </li>                           
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="afi-container">
+            <div class="main-afi">
+               <div class="afi-left">
+                    <div class="gen-box">
+                        <div class="gbox-list">
+                            <button class="gen1">
+                                <h5>Gen1</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen2">
+                                <h5>Gen2</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen3">
+                                <h5>Gen3</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen4">
+                                <h5>Gen4</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen5">
+                                <h5>Gen5</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen6">
+                                <h5>Gen6</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen7">
+                                <h5>Gen7</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen8">
+                                <h5>Gen8</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen9">
+                                <h5>Gen9</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen10">
+                                <h5>Gen10</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen11">
+                                <h5>Gen11</h5>
+                                <span>120.00$</span>
+                            </button>
+                            <button class="gen12">
+                            <h5>Gen12</h5>
+                            <span>120.00$</span>
+                            </button>
+                        </div>
+                    </div>
+               </div>
+               <div class="afi-right">
+                <div class="af-table">
+                    <table class="af-li-item" width="100%" cellspacing="4%">
+                        <tr class="af-list">
+                            <th class="al-item1">Name</th>
+                            <th class="al-item2">Commission</th>
+                            <th class="al-item3">Date</th>
+                            <th class="al-item4">Discount %</th>
+                        </tr>
+                        <tr class="af-main-list">
+                            <td class="al-item" width="30%">Gen 1</th>
+                            <td class="al-item2" width="20%">$150 </th>
+                            <td class="al-item" width="25%">12/15/2023</th>
+                            <td class="al-item" width="25%">10%</th>
+                        </tr>
+                        <tr class="af-main-list">
+                            <td class="al-item">Gen 1</th>
+                            <td class="al-item2">$150 </th>
+                            <td class="al-item">12/15/2023</th>
+                            <td class="al-item">10%</th>
+                        </tr>
+                        <tr class="af-main-list">
+                            <td class="al-item">Gen 1</th>
+                            <td class="al-item2">$150 </th>
+                            <td class="al-item">12/15/2023</th>
+                            <td class="al-item">10%</th>
+                        </tr>
+                        <tr class="af-main-list">
+                            <td class="al-item">Gen 1</th>
+                            <td class="al-item2">$150 </th>
+                            <td class="al-item">12/15/2023</th>
+                            <td class="al-item">10%</th>
+                        </tr>
+                        <tr class="af-main-list">
+                            <td class="al-item">Gen 1</th>
+                            <td class="al-item2">$150 </th>
+                            <td class="al-item">12/15/2023</th>
+                            <td class="al-item">10%</th>
+                        </tr>
+                        <tr class="af-main-list">
+                            <td class="al-item">Gen 1</th>
+                            <td class="al-item2">$150 </th>
+                            <td class="al-item">12/15/2023</th>
+                            <td class="al-item">10%</th>
+                        </tr>
+                        <tr class="af-main-list">
+                            <td class="al-item">Gen 1</th>
+                            <td class="al-item2">$150 </th>
+                            <td class="al-item">12/15/2023</th>
+                            <td class="al-item">10%</th>
+                        </tr>
+                        <tr class="af-main-list">
+                            <td class="al-item">Gen 1</th>
+                            <td class="al-item2">$150 </th>
+                            <td class="al-item">12/15/2023</th>
+                            <td class="al-item">10%</th>
+                        </tr>
+                        <tr class="af-main-list">
+                            <td class="al-item">Gen 1</th>
+                            <td class="al-item2">$150 </th>
+                            <td class="al-item">12/15/2023</th>
+                            <td class="al-item">10%</th>
+                        </tr>
+                       
+                       
+                    </table>
+                </div> 
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script src="calender.js"></script>
+    <script src="date.js"></script>
+    <script src="payment.js"></script>
+    <script src="month.js"></script>
+</body>
+</html>
